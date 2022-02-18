@@ -1,5 +1,8 @@
+import { getArgs } from './helpers/args.js';
+
 const initCLI = () => {
-    console.log('started');
+    const args = getArgs(process.argv)
+    console.log(args);
 }
 
 initCLI()
