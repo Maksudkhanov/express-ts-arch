@@ -2,12 +2,27 @@
   "name": "trash",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
-  "type": "module",
+  "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/main.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maksudkhanov/weather-cli.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maksudkhanov/weather-cli/issues"
+  },
+  "homepage": "https://github.com/Maksudkhanov/weather-cli#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
+  }
 }
