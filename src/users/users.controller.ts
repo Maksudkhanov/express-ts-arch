@@ -50,6 +50,7 @@ export class UserController extends BaseController implements IUserController {
 		next: NextFunction,
 	): Promise<void> {
 		const result = await this.userService.validateUser(req.body);
+
 		if (!result) {
 			return next(new HTTPError(401, 'Register Error', 'Login'));
 		}
@@ -64,6 +65,7 @@ export class UserController extends BaseController implements IUserController {
 		next: NextFunction,
 	): Promise<void> {
 		const result = await this.userService.createUser(body);
+
 		if (!result) {
 			return next(new HTTPError(422, 'Such user already exists'));
 		}
